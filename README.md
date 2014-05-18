@@ -43,6 +43,22 @@ Code | Description
 404 Not Found | API resource not found
 406 Not Acceptable | Token was previously deleted because other device join to same service
 
+In every response returned JSON document with standart structure:
+
+Name | Type | Required | Description
+-----|------|----------|------------
+error | integer | yes | Status of request. If 0 - no error found, if greater - error occured.
+errorMessage | string | no | Textual description of error. present only if "error" not equal 0
+time| timestamp | yes | Unit timestamp of time on server 
+
+Example:
+```json
+{
+  "error": 1,
+  "errorMessage": "Textual error description",
+  "time": 1400404339
+}
+```
 
 Authorisation and user management
 ---------------------------------
