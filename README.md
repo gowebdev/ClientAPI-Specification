@@ -116,8 +116,8 @@ PUT /1.2/services/clientBaseService
 ```
 Name|Required|Type|Default|Description
 ----|--------|----|-------|-----------
-service|yes|integer|New service id
-custom_name|no|string|New custom name
+service|yes|integer||New service id
+custom_name|no|string||New custom name
 
 #### Update existed client's base service
 ```
@@ -126,8 +126,8 @@ POST /1.2/services/clientBaseService
 Name|Required|Type|Default|Description
 ----|--------|----|-------|-----------
 id|yes|integer||Id of client`s base service
-service|yes|integer|New service id
-custom_name|no|string|New custom name
+service|yes|integer||New service id
+custom_name|no|string||New custom name
 status|no|ENUM('ACTIVE','SUSPENDED','BLOCKED','CLOSED')||New status
 
 #### Delete existed client's base service
