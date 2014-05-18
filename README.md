@@ -107,10 +107,9 @@ Authorisation not required.
 GET /1.2/services
 ```
 
-### Base client service
-Managing of client's base service.
+
+### Create new client's base service
 Authorisation required.
-#### Create new client's base service
 ```
 PUT /1.2/services/clientBaseService
 ```
@@ -119,7 +118,8 @@ Name|Required|Type|Default|Description
 service|yes|integer||New service id
 custom_name|no|string||New custom name
 
-#### Update existed client's base service
+### Update existed client's base service
+Authorisation required.
 ```
 POST /1.2/services/clientBaseService
 ```
@@ -130,7 +130,8 @@ service|yes|integer||New service id
 custom_name|no|string||New custom name
 status|no|ENUM('ACTIVE','SUSPENDED','BLOCKED','CLOSED')||New status
 
-#### Delete existed client's base service
+### Delete existed client's base service
+Authorisation required.
 ```
 DELETE /1.2/services/clientBaseService
 ```
@@ -143,7 +144,7 @@ Logging
 -------
 
 ### Register event
-
+Authorisation required.
 ```
 POST /1.2/logger/log
 ```
