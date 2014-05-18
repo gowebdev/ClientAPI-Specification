@@ -63,19 +63,53 @@ Example:
 Authorisation and user management
 ---------------------------------
 
+### Registration
+
+### Authorisation
+
+### Logout
+
+### Status
+
+### Reset password
+
+
+
 Channels
 --------
+
+### Channel list
+
+### EPG and TVoD
+
+### Favourite channels
 
 Films
 -----
 
+### Genres
+
+### Searching
+
+### Suggested videos
+
 Radio
 -----
+
+### Channel list
 
 Services
 --------
 
+### Services list
+
+### Base client service
+
+### Additional client service
+
 Logging
 -------
+
+### Register event
 
 
