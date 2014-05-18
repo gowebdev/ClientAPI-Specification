@@ -100,11 +100,43 @@ Radio
 
 Services
 --------
-
 ### Services list
+Get list of all active services and related channels.
+Authorisation not required.
+```
+GET /1.2/services
+```
 
 ### Base client service
+Managing of client's base service.
+Authorisation required.
+#### Create new client's base service
+```
+PUT /1.2/services/clientBaseService
+```
+Name|Required|Type|Default|Description
+----|--------|----|-------|-----------
+service|yes|integer|New service id
+custom_name|no|string|New custom name
 
+#### Update existed client's base service
+```
+POST /1.2/services/clientBaseService
+```
+Name|Required|Type|Default|Description
+----|--------|----|-------|-----------
+id|yes|integer||Id of client`s base service
+service|yes|integer|New service id
+custom_name|no|string|New custom name
+status|no|ENUM('ACTIVE','SUSPENDED','BLOCKED','CLOSED')||New status
+
+#### Delete existed client's base service
+```
+DELETE /1.2/services/clientBaseService
+```
+Name|Required|Type|Default|Description
+----|--------|----|-------|-----------
+id|yes|integer||Id of client`s base service
 ### Additional client service
 
 Logging
