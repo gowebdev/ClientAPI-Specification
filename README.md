@@ -144,4 +144,14 @@ Logging
 
 ### Register event
 
+```
+POST /1.2/logger/log
+```
+Name|Required|Type|Default|Description
+----|--------|----|-------|-----------
+time|no|Timestamp GMT|Current timestamp|Time when error occured. If ommited — current time used, else must be timestamp GMT
+file|no|string||File in which error occured, if able to get
+line|no|integer||Line in which error occured, if able to get
+message|yes|string||Traces, messages in common format
+
 
