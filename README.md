@@ -69,6 +69,8 @@ Authorisation and user management
 
 Token, received in response, must be send in header "X-Auth-Token" on any other requests to API, which requires authorization. If any credentials ommited, demo user with demo services will auth.
 
+Client chooses active base service on current device by specifying id of service in "service_id" param . If no service specified - the most expensive service chooses.
+
 ```
 POST /1.2/users/token
 ```
@@ -213,7 +215,7 @@ Deprecated resource, removed in API v.1.3:
 ```
 GET /1.2/users/profile
 ```
-Request params, used only when auth througn email and password. If auth token passed in header, this params omitted:
+Request params, used only when authorization made througn email and password. This need when selecting of active service while authorization process is undesirable. If auth token passed in header, this params omitted.
 
 Name|Required|Type|Default|Description
 ----|--------|----|-------|-----------
