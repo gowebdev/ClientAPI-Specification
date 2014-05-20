@@ -67,6 +67,69 @@ Authorisation and user management
 
 ### Authorisation
 
+### User profile
+
+Authorisation required. Profile of user may be obtained with authentication through email and password or throught passing auth token.
+Authorisation required.
+```
+GET /1.2/user
+```
+Deprecated resource, removed in API v.1.3:
+```
+GET /1.2/users/profile
+```
+Request params, used only when auth througn email and password. If auth token passed in header, this params omitted:
+Name|Required|Type|Default|Description
+----|--------|----|-------|-----------
+email|no|string||E-mail
+password|no|string||Password
+Response:
+```json
+{
+    "error": 0,
+    "balance": {
+        "amount": 9.472,
+        "currency": "EUR"
+    },
+    "profile": {
+        "id": 36574,
+        "email": "john.watson@example.com",
+        "hash": "c7244869cbb730dcf13d0f5f94655b591da6a32f",
+        "last_name": "Watson",
+        "first_name": "John",
+        "gender": "MALE",
+        "birthday": "1852-12-12",
+        "contract_number": "00036574",
+        "status": "ACTIVE",
+        "tester": 1
+    },
+    "baseServices": [
+        {
+            "id": 44170,
+            "service_id": 9,
+            "name": "Basic",
+            "custom_name": "In kitchen",
+            "cost": 0.033,
+            "total_cost": 0.033,
+            "status": "ACTIVE",
+            "catchup": 1,
+            "ad": 0
+        },
+        {
+            "id": 45572,
+            "service_id": 9,
+            "name": "Advanced",
+            "custom_name": "In hall",
+            "cost": 0.033,
+            "total_cost": 0.033,
+            "status": "ACTIVE",
+            "catchup": 1,
+            "ad": 0
+        }
+    ],
+    "time": 1400576569
+}
+```
 ### Logout
 
 ### Status
