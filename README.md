@@ -207,7 +207,6 @@ catchup|no|boolean||Catchup enabled for this service
 ### User profile
 
 Authorisation required. Profile of user may be obtained with authentication through email and password or throught passing auth token.
-Authorisation required.
 ```
 GET /1.2/user
 ```
