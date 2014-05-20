@@ -79,10 +79,12 @@ Deprecated resource, removed in API v.1.3:
 GET /1.2/users/profile
 ```
 Request params, used only when auth througn email and password. If auth token passed in header, this params omitted:
+
 Name|Required|Type|Default|Description
 ----|--------|----|-------|-----------
 email|no|string||E-mail
 password|no|string||Password
+
 Response:
 ```json
 {
