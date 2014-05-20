@@ -111,21 +111,21 @@ Response:
         "patronymic": "Jay",
         "gender": "MALE",
         "birthday": "1965-10-01",
-        “tester”: 1,
-	“contract_number”: '0001234567'
+        "tester": 1,
+        "contract_number": '0001234567'
     },
     "balance": {
         "amount": 55.9,
-        "currency": "USD"
+        "currency": "EUR"
     },
     "baseServices": [
         {
             "id": 19040,
-            "custom_name": "У вітальні",
+            "custom_name": "In hall",
             "service_id": 1,
-            "name": "SmartTV",
+            "name": "Advanced",
             "cost": "0.16",
-		"ad": 1,
+            "ad": 1,
             "catchup": 0,
             "additional": [
                 {
@@ -139,9 +139,9 @@ Response:
         },
         {
             "id": 36146,
-            "custom_name": "На веранді",
+            "custom_name": "In kitchen",
             "service_id": 3,
-            "name": "SmartTV+",
+            "name": "Basic",
             "cost": "0.2",
             "total_cost": 0.2
         }
