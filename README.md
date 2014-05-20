@@ -67,6 +67,40 @@ Authorisation and user management
 
 ### Authorisation
 
+```
+POST /1.2/users/token
+```
+Deprecated resource, removed in API v.1.3:
+```
+POST /1.2/users/authorize 
+```
+
+Name|Required|Type|Default|Description
+----|--------|----|-------|-----------
+api_key|yes (since v1.2)|varchar(40)||API key for client identification.
+email|no|varchar(40)||User's email, used to identify user on auth server. omitted in demo authorization
+password|no|varchar||User's password. Omitted in demo authorization
+agent|no|varchar||Agent identifier. Specify agent only in demo authorization, when lodin and password empty.
+remember|no|boolean||If set, server generates permanent identificator, which definetly identify client application on server. This hash stores localy on client and will send to server while next authorization request.
+permid|no|varchar||Permanent identificator, which definetly identify client application on server. This hash stores localy on client and will send to server while next authorization request. 
+service_id|no|integer||Id of base service, which defines set of base and additional services configured in personal page. If omited than it will be chosen automatically as most expensive service
+application_version|no|varchar||Client version: “major.minor.build”
+os_type|no|varchar||OS type: “IOS”, “BBQNX”, “Linux” etc
+os_version|no|varchar||OS version: “3.1.3” etc
+device_model|no|varchar||Device model (if appropriate): “iPhone” etc
+uuid|no|varchar(16)||UUID generated on first start of the application
+device_id|no|varchar||Device ID (if any, used on older iOS)
+advertising_id|no|varchar||iOS 6 advertising ID (if any)
+vendor_id|no|varchar||iOS6 vendor ID (if any)
+mac|no|varchar||Network interface MAC address
+ip|no|varchar||Original IP of client. Used if client IP different from IP, from which requests to API sends
+referal|no|varchar||Identity of referal. Deprecated at v.1.2 and will be removed in v.1.3 due to passing agent on registration
+expiration|no|integer||Used only for DEBUG. May be disabled in production environment. Specify delay of session life in seconds.
+session|no|boolean||Start session on billing side. If 1 passed — session initialised and id of session returned
+
+
+### Logout
+
 ### User profile
 
 Authorisation required. Profile of user may be obtained with authentication through email and password or throught passing auth token.
@@ -132,7 +166,6 @@ Response:
     "time": 1400576569
 }
 ```
-### Logout
 
 ### Status
 
