@@ -104,7 +104,7 @@ Response:
 ```json
 {
     "status": 0,
-    "token": d41d8cd98f00b204e9800998ecf8427e,
+    "token": "d41d8cd98f00b204e9800998ecf8427e",
     "profile": {
         "last_name": "Simpson",
         "first_name": "Homer",
@@ -112,7 +112,7 @@ Response:
         "gender": "MALE",
         "birthday": "1965-10-01",
         "tester": 1,
-        "contract_number": '0001234567'
+        "contract_number": "0001234567"
     },
     "balance": {
         "amount": 55.9,
