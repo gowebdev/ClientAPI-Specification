@@ -194,9 +194,9 @@ custom_name|yes|string||Name of client's base service
 service_id|yes|ineger||Id of service
 name|yes|string||Name of service
 cost|yes|float||cost of service by month
-additional|no|list|Related additional services
+additional|no|list||Related additional services
 total_costyes||float||Cost of base and additional services 
-ad|no|booleand|Advertising must be shown in shis service
+ad|no|booleand||Advertising must be shown in shis service
 catchup|no|boolean||Catchup enabled for this service
 
 
