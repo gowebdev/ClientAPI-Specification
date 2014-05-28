@@ -311,7 +311,7 @@ GET /1.2/services
 ### Create new client's base service
 Authorisation required.
 ```
-PUT /1.2/services/clientBaseService
+POST /1.2/services/clientBaseService
 ```
 Name|Required|Type|Default|Description
 ----|--------|----|-------|-----------
@@ -321,7 +321,7 @@ custom_name|no|string||New custom name
 ### Update existed client's base service
 Authorisation required.
 ```
-POST /1.2/services/clientBaseService
+PUT /1.2/services/clientBaseService
 ```
 Name|Required|Type|Default|Description
 ----|--------|----|-------|-----------
