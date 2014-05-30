@@ -38,10 +38,10 @@ Code | Description
 200 OK | Request successfull. If token send, then validation of token successfull
 304 Not Modified | Response not modified from last request. Reply on request with If-Modified-Since header
 400 Bad Request | Request params not specified of request method wrong
-401 Unauthorized | Token not specified in headers
-403 Forbidden | Token not found or expired
+401 Unauthorized | Token not specified in headers, if this token required by resource
+403 Forbidden | Token not found or expired, if this token required for resource
 404 Not Found | API resource not found
-406 Not Acceptable | Token was previously deleted because other device join to same service
+406 Not Acceptable | Token was previously deleted because other device join to same service, if this token required for resource
 
 In every response returned JSON document with standart structure:
 
