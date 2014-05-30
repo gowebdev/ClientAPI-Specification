@@ -129,6 +129,9 @@ Response:
             "cost": "0.16",
             "ad": 1,
             "catchup": 0,
+            "stb": [
+            
+            ] 
             "additional": [
                 {
                     "id": 36147,
@@ -200,7 +203,7 @@ additional|no|list||Related additional services
 total_costyes||float||Cost of base and additional services 
 ad|no|booleand||Advertising must be shown in shis service
 catchup|no|boolean||Catchup enabled for this service
-
+stb|no|array||List of related STB
 
 ### Logout
 
