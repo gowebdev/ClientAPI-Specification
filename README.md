@@ -190,7 +190,7 @@ Name|Required|Type|Default|Description
 amount|yes|float||Amount on balance of user
 currency|yes|string||Code of currency
 
-Client's base service structire:
+Client's base service structure:
 
 Name|Required|Type|Default|Description
 ----|--------|----|-------|-----------
