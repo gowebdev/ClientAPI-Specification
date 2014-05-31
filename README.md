@@ -157,7 +157,7 @@ Response:
 
 Name|Required|Type|Default|Description
 ----|--------|----|-------|-----------
-status|yes|integer||Status code of operation. May be one of these values: 0 - Authorization successfull, 1 - Server error (generic), 2 - Wrong credentials, 3 - Account blocked, 4 - Email not confirmed yet, 5 - Client version not supported, 6 — No active service found (Client myst register some service in personal cabinet)
+status|yes|integer||Status code of operation. May be one of these values: 0 - Authorization successfull, 1 - Server error (generic), 2 - Wrong credentials, 3 - Account blocked, 4 - Email not confirmed yet, 5 - Client version not supported, 6 — No active service found (Client myst register some service in personal cabinet), 7 - passed service is wrong
 token|yes|varchar(32)||Authorization token, used as session id to identify any request to API. Send only when status code is 0. This token may expire if client is not active for some time, so new authorization may be needed. Token expiration time updates on every client request to API. Expiration period  not more than few hours. Hash binded to client ip.
 permid|no|varchar||Permanent identificator, which definetly identify client application on server. This hash stores localy on client and will send to server while next authorization request. Send only if request parameter "remember" set to "true". Expiration period is up to one month. 
 profile|yes|dictionary||Profile dictionary of user, as described below.
