@@ -285,7 +285,17 @@ Channels
 
 ### EPG and TVoD
 
-### Favourite channels
+### Add channel to favourites
+Authorization required.
+```
+POST /1.2/channels/favourite/channel/{channel_number}
+```
+
+### Delete channel from favourites
+Authorization required.
+```
+DELETE /1.2/channels/favourite/channel/{channel_number}
+```
 
 Films
 -----
