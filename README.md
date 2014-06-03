@@ -82,7 +82,7 @@ first_name|no|varchar(30)||First name
 gender|no|enum('MALE','FEMALE')||Gender of user
 birthday|no|string (yyyy-mm-dd)||Birthday of user
 service|no|int||Identifier of service which abonent want to use. If no service specified — default base service used.
-agent|no|varchar(20)||Ff specified, define agent of registered user
+agent|no|varchar(20)||If specified, define agent of registered user
 
 Response:
 ```php
