@@ -65,6 +65,45 @@ Authorisation and user management
 
 ### Registration
 
+```
+POST /1.2/user
+```
+Deprecated resource, removed in API v.1.3:
+```
+MIXED /1.2/users/register 
+```
+
+Name|Required|Type|Default|Description
+----|--------|----|-------|-----------
+email|yes|varchar(40)||User's email, used to identify user on auth server
+password|yes|varchar||User's password, used to identify user on auth server
+last_name|no|varchar(30)||Last name
+first_name|no|varchar(30)||First name
+gender|no|enum('MALE','FEMALE')||Gender of user
+birthday|no|string (yyyy-mm-dd)|Birthday of user
+service|no|int|Identifier of service which abonent want to use. If no service specified — default base service used.
+agent|no|varchar(20)||Ff specified, define agent of registered user
+
+Response:
+```php
+{
+    "status": 1,
+    "validate_errors": {
+        "password": {
+            "required": "Password required"
+        },
+        "email": {
+            "required": "Please, fill your E-mail"
+        }
+    }
+}
+```
+
+Name|Required|Type|Default|Description
+----|--------|----|-------|-----------
+status|yes|integer||Status code of operation. May be one of these values: 0 - Registration successfull, 1 - Required fields empty, 2 - E-mail already registered, 3 - Invalid email, 4 - Invalid password, 5 - Validation error (generic)
+validate_errors|optional|dictionary||If status code is not 0, than list of invalid fields send in format: ```php{"fieldName": {"validatroName": "localizedMessage",....},...}``` Validators may be: "required" - Field is required, "email" - Email format id wrong, "unique" - Field must be unique (e.g. email already registered)
+
 ### Authorisation
 
 Token, received in response, must be send in header "X-Auth-Token" on any other requests to API, which requires authorization. If any credentials ommited, demo user with demo services will auth.
