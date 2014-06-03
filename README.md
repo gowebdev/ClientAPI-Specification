@@ -85,7 +85,7 @@ service|no|int||Identifier of service which abonent want to use. If no service s
 agent|no|varchar(20)||If specified, define agent of registered user
 
 Response:
-```php
+```json
 {
     "status": 1,
     "validate_errors": {
@@ -102,7 +102,7 @@ Response:
 Name|Required|Type|Default|Description
 ----|--------|----|-------|-----------
 status|yes|integer||Status code of operation. May be one of these values: 0 - Registration successfull, 1 - Required fields empty, 2 - E-mail already registered, 3 - Invalid email, 4 - Invalid password, 5 - Validation error (generic)
-validate_errors|optional|dictionary||If status code is not 0, than list of invalid fields send in format: ```php{"fieldName": {"validatroName": "localizedMessage",....},...}``` Validators may be: "required" - Field is required, "email" - Email format id wrong, "unique" - Field must be unique (e.g. email already registered)
+validate_errors|optional|dictionary||If status code is not 0, than list of invalid fields send in format: ```json {"fieldName": {"validatroName": "localizedMessage",....},...}``` Validators may be: "required" - Field is required, "email" - Email format id wrong, "unique" - Field must be unique (e.g. email already registered)
 
 ### Authorisation
 
