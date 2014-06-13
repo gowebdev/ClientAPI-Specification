@@ -117,6 +117,7 @@ Deprecated resource, removed in API v.1.3:
 ```
 POST /1.2/users/authorize 
 ```
+Request parameters:
 
 Name|Required|Type|Default|Description
 ----|--------|----|-------|-----------
