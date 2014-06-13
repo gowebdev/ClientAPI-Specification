@@ -150,7 +150,6 @@ Response:
     "profile": {
         "last_name": "Simpson",
         "first_name": "Homer",
-        "patronymic": "Jay",
         "gender": "MALE",
         "birthday": "1965-10-01",
         "tester": 1,
