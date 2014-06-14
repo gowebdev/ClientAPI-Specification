@@ -237,12 +237,24 @@ id|yes|integer||Id of client's base service
 custom_name|yes|string||Name of client's base service
 service_id|yes|ineger||Id of service
 name|yes|string||Name of service
-cost|yes|float||cost of service by month
+cost|yes|float||cost of service by chergeoff period
+total_cost|yes|float||total cost of base service and all additional services by chergeoff period
+total_monthly_cost|yes|float||total monthly cost of base service and all additional services by chergeoff period
+chargeoff_period|yes|ENUM('DAILY','MONTHLY')||Chargeoff period
 additional|no|list||Related additional services
 total_costyes||float||Cost of base and additional services 
 ad|no|booleand||Advertising must be shown in shis service
 catchup|no|boolean||Catchup enabled for this service
 stb|no|array||List of related STB
+
+Client's additional service strycture
+Name|Required|Type|Default|Description
+----|--------|----|-------|-----------
+id|yes|integer||Id of client's additional service
+service_id|yes|ineger||Id of service
+custom_name|yes|string||Name of client's additional service
+cost|yes|float||cost of service by chargeoff period
+chargeoff_period|yes|ENUM('DAILY','MONTHLY')||Chargeoff period
 
 ### Logout
 
