@@ -248,6 +248,7 @@ catchup|no|boolean||Catchup enabled for this service
 stb|no|array||List of related STB
 
 Client's additional service strycture
+
 Name|Required|Type|Default|Description
 ----|--------|----|-------|-----------
 id|yes|integer||Id of client's additional service
