@@ -207,7 +207,7 @@ speed|yes|list||List of connect speed where keys are identifiers and values are 
 rechargePage|yes|string||Url of page, used for recharging account
 profilePage|yes|string||Url of user's profile in billing
 
-<a name="client-profile"></a>Profile dictionary:
+#### Profile dictionary:
 
 Name|Required|Type|Default|Description
 ----|--------|----|-------|-----------
@@ -222,14 +222,14 @@ contract_number|yes|varchar||Contract number
 status|yes|enum||Status of contract: ACTIVE -abonent active, SUSPENDED - stop by abonent himself, BLOCKED - stop by operator, CLOSED - contract closed
 tester|no|int(1,0)||Tester mode status of user. If 1 — user in tester mode. Default — 0. User in tester mode may have some additional functionality in app
 
-<a name="client-balance"></a>Balance dictionary:
+#### Balance dictionary:
 
 Name|Required|Type|Default|Description
 ----|--------|----|-------|-----------
 amount|yes|float||Amount on balance of user
 currency|yes|string||Code of currency
 
-<a name="client-base-service"></a>Client's base service structure:
+#### Client's base service structure:
 
 Name|Required|Type|Default|Description
 ----|--------|----|-------|-----------
@@ -247,7 +247,7 @@ ad|no|booleand||Advertising must be shown in shis service
 catchup|no|boolean||Catchup enabled for this service
 stb|no|array||List of related STB
 
-<a href="client-additional-service"></a>Client's additional service structure:
+#### Client's additional service structure:
 
 Name|Required|Type|Default|Description
 ----|--------|----|-------|-----------
