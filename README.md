@@ -392,8 +392,8 @@ Channel dictionary "channels":
 Name|Required|Type|Default|Description
 ----|--------|----|-------|-----------
 id|yes|int||Id of channel
-name|yes|string|Name of channel
-logo|yes|string|Url of channel logo
+name|yes|string||Name of channel
+logo|yes|string||Url of channel logo
 
 Response:
 
