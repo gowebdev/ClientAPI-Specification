@@ -371,6 +371,71 @@ Authorisation not required.
 GET /1.2/services
 ```
 
+Name|Required|Type|Default|Description
+----|--------|----|-------|-----------
+packets|yes|list||List of service dictionaries, described below
+channels|yes|list||List of channel dictionaries, described below
+
+Service dictionary "packets":
+
+Name|Required|Type|Default|Description
+----|--------|----|-------|-----------
+id|yes|int||Id of service
+name|yes|string||Name of service
+cost|yes|float||Cost of service
+type|yes|ENUM('BASE','ADDITIONAL')||Type of service
+channels|yes|list||List of channel ids, which belongs to this service. Channels can be found in "channels" section of this response
+
+
+Channel dictionary "channels":
+
+Name|Required|Type|Default|Description
+----|--------|----|-------|-----------
+id|yes|int||Id of channel
+name|yes|string|Name of channel
+logo|yes|string|Url of channel logo
+
+Response:
+
+```json
+{
+    "error": 0,
+    "packets": [
+        {
+            "id": 9,
+            "name": "Домашний",
+            "cost": "0.99",
+            "type": "BASE",
+            "channels": [
+                1,
+                2
+            ]
+        },
+        {
+            "id": 6,
+            "name": "Рекламний",
+            "cost": "0",
+            "type": "BASE",
+            "channels": [
+                1
+            ]
+        }
+    ],
+    "channels": [
+        {
+            "id": 1,
+            "name": "Channel+",
+            "logo": "http://service.com/logos/68x48/cp.png"
+        },
+        {
+            "id": 2,
+            "name": "Channel France",
+            "logo": "http://service.com/logos/68x48/cf.png"
+        }
+    ],
+    "time": 1402951112
+}
+```
 
 ### Create new client's base service
 Authorisation required.
