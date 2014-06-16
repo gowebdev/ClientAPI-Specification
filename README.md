@@ -242,7 +242,7 @@ total_cost|yes|float||total cost of base service and all additional services by 
 total_monthly_cost|yes|float||total monthly cost of base service and all additional services by chergeoff period
 chargeoff_period|yes|ENUM('DAILY','MONTHLY')||Chargeoff period
 additional|no|list||Related additional services
-total_costyes||float||Cost of base and additional services 
+total_cost|yes|float||Cost of base and additional services 
 ad|no|booleand||Advertising must be shown in shis service
 catchup|no|boolean||Catchup enabled for this service
 stb|no|array||List of related STB
